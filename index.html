@@ -32,36 +32,46 @@
                 if(playerSelection.toLowerCase() ==='scissors'){
                     if(computerSelection.toLowerCase() === 'paper'){
                         console.log('Player wins');
+                        wins = wins + 1;
                     }
                     if(computerSelection.toLowerCase()=== 'rock'){
                         console.log('Computer wins');
                     }
+
                 }
                 if(playerSelection.toLowerCase() ==='paper'){
                     if(computerSelection.toLowerCase() === 'rock'){
                         console.log('Player wins');
+                        wins = wins + 1;
                     }
                     if(computerSelection.toLowerCase()=== 'scissors'){
                         console.log('Computer wins');
                     }
+
                 }
                 if(playerSelection.toLowerCase() ==='rock'){
                     if(computerSelection.toLowerCase() === 'scissors'){
                         console.log('Player wins');
+                        wins = wins + 1;
                     }
                     if(computerSelection.toLowerCase()=== 'paper'){
                         console.log('Computer wins');
                     }
+
                 }
             }
         }
         function game(){
-            for(let i =0;i<5;i++){
-                let playerSelection = prompt("Please enter your selecttion");
+            while(wins <= 5 && gamesplayed <= 10){
+                let playerSelection = prompt("Please enter your selection");
                 let computerSelection = computerPlay();
                 playRound(playerSelection,computerSelection);
+                gamesplayed = gamesplayed + 1;
+
             }
         }
+        var gamesplayed = 0;
+        var wins = 0;
         game();
 
     </script>
