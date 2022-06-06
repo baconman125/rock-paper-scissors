@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <script>
+        function computerPlay(){
+            let computerpick = Math.floor(Math.random()*10)+1;
+            if(computerpick%3 ===0)
+            {
+                return 'rock';
+            }
+            if(computerpick%3 ===1)
+            {
+                return 'paper';
+            }
+            if(computerpick%3 ===2)
+            {
+                return 'scissors';
+            }
+        }
+        function playRound(playerSelection, computerSelection){
+            if(playerSelection!= null){
+                if(playerSelection.toLowerCase() === computerSelection.toLowerCase())
+                {
+                    console.log('tie');
+                }
+                if(playerSelection.toLowerCase() ==='scissors'){
+                    if(computerSelection.toLowerCase() === 'paper'){
+                        console.log('Player wins');
+                    }
+                    if(computerSelection.toLowerCase()=== 'rock'){
+                        console.log('Computer wins');
+                    }
+                }
+                if(playerSelection.toLowerCase() ==='paper'){
+                    if(computerSelection.toLowerCase() === 'rock'){
+                        console.log('Player wins');
+                    }
+                    if(computerSelection.toLowerCase()=== 'scissors'){
+                        console.log('Computer wins');
+                    }
+                }
+                if(playerSelection.toLowerCase() ==='rock'){
+                    if(computerSelection.toLowerCase() === 'scissors'){
+                        console.log('Player wins');
+                    }
+                    if(computerSelection.toLowerCase()=== 'paper'){
+                        console.log('Computer wins');
+                    }
+                }
+            }
+        }
+        function game(){
+            for(let i =0;i<5;i++){
+                let playerSelection = prompt("Please enter your selecttion");
+                let computerSelection = computerPlay();
+                playRound(playerSelection,computerSelection);
+            }
+        }
+        game();
+
+    </script>
+</body>
+</html>
