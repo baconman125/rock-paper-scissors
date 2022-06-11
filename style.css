@@ -1,0 +1,101 @@
+html{
+    background-color: #0d1b24;
+}
+.container-main{
+    background-color:#1d4344;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 100px;
+    color:#edbf43;
+    width: 720px;
+    border: 5px solid aqua;
+    margin-left:500px;
+}
+.header{
+
+    font-weight: bolder;
+    font-size: 42px;
+}
+.win-or-lose{
+
+    margin-top:15px;
+
+}
+.round-container{
+
+    margin-top:15px;    
+    display:flex;
+    flex-direction:row;
+    gap:100px;
+    justify-content: space-evenly;
+    margin-left:-20px;
+}
+.result{
+
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top:25px;
+}
+.scorehead{
+ 
+    margin-top:15px;
+    display:flex;
+    justify-content: center;
+}
+.total-score-container{
+
+    display:flex;
+    flex-direction:row;
+    gap:150px;
+    margin-top:10px;
+}
+.player-score{
+
+    display:flex;
+    flex-direction: column;
+}
+.num-player-score{
+
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.computer-score{
+
+    display:flex;
+    flex-direction:column;
+}
+.num-computer-score{
+
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+.container-buttons{
+
+    margin-top:15px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    
+}
+.button-selections{
+ 
+    margin-top:5px;
+    display:flex;
+    flex-direction:row;
+    height:50px;
+    justify-content:center;
+    gap:50px;
+    
+}
+.btn{
+
+    width:75px;
+    height:50px;
+    text-rendering:auto;
+    font-size: 12px;
+
+}

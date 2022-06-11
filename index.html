@@ -4,76 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <link rel ="stylesheet" href = "./style.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <script>
-        function computerPlay(){
-            let computerpick = Math.floor(Math.random()*10)+1;
-            if(computerpick%3 ===0)
-            {
-                return 'rock';
-            }
-            if(computerpick%3 ===1)
-            {
-                return 'paper';
-            }
-            if(computerpick%3 ===2)
-            {
-                return 'scissors';
-            }
-        }
-        function playRound(playerSelection, computerSelection){
-            if(playerSelection!= null){
-                if(playerSelection.toLowerCase() === computerSelection.toLowerCase())
-                {
-                    console.log('tie');
-                }
-                if(playerSelection.toLowerCase() ==='scissors'){
-                    if(computerSelection.toLowerCase() === 'paper'){
-                        console.log('Player wins');
-                        wins = wins + 1;
-                    }
-                    if(computerSelection.toLowerCase()=== 'rock'){
-                        console.log('Computer wins');
-                    }
 
-                }
-                if(playerSelection.toLowerCase() ==='paper'){
-                    if(computerSelection.toLowerCase() === 'rock'){
-                        console.log('Player wins');
-                        wins = wins + 1;
-                    }
-                    if(computerSelection.toLowerCase()=== 'scissors'){
-                        console.log('Computer wins');
-                    }
-
-                }
-                if(playerSelection.toLowerCase() ==='rock'){
-                    if(computerSelection.toLowerCase() === 'scissors'){
-                        console.log('Player wins');
-                        wins = wins + 1;
-                    }
-                    if(computerSelection.toLowerCase()=== 'paper'){
-                        console.log('Computer wins');
-                    }
-
-                }
-            }
-        }
-        function game(){
-            while(wins <= 5 && gamesplayed <= 10){
-                let playerSelection = prompt("Please enter your selection");
-                let computerSelection = computerPlay();
-                playRound(playerSelection,computerSelection);
-                gamesplayed = gamesplayed + 1;
-
-            }
-        }
-        var gamesplayed = 0;
-        var wins = 0;
-        game();
-
-    </script>
+    <div class="container-main">
+        <div class = "header">ROCK PAPER SCISSORS</div>
+        <div class="win-or-lose"></div>
+        <div class="round-container">
+            <div class="player-pick">?</div>
+            <div class="vs">V.S</div>
+            <div class="robot-pick">?</div>
+        </div>
+        <div class="score-container">
+            <div class="result"></div>
+            <div class="scorehead">SCORE</div>
+            <div class="total-score-container">
+                <div class="player-score">
+                    <div class="player-name">Player</div>
+                    <div class="num-player-score">0</div>
+                </div>
+                <div class="computer-score">
+                    <div class="computer-name">Computer</div>
+                    <div class="num-computer-score">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="container-buttons">
+            <div class="choose">Click On One As Your Choice</div>
+            <div class="button-selections">
+                <button class="btn" id ="rock">Rock</button>
+                <button class="btn"id= "paper">Paper</button>
+                <button class="btn"id="scissors">Scissors</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
